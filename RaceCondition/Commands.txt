@@ -1,0 +1,8 @@
+gcc vulp.c -o vulp
+
+sudo chown root vulp; sudo chmod 4755 vulp; ls -l vulp
+
+sudo sysctl -w fs.protected_symlinks=0
+
+./race_vul.sh
+./race_link.sh
